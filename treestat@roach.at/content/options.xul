@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://treestat/locale/treestat.dtd">
+
+
+<dialog
+  id="treestat-prefs"
+  title="&prefs_title;"
+  orient="vertical"
+  buttons="accept,cancel"
+  onload="TreeStatOptions.init();"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  ondialogaccept="TreeStatOptions.commit();"
+  >
+  <script type="application/x-javascript" src="chrome://treestat/content/options.js"/>
+  <prefpane id="treestat-pref-pane">
+    <hbox flex="1">
+        <vbox flex="1">
+          <caption label="&prefs_active;"/>
+          <listbox id="treestat-active"
+           onselect="TreeStatOptions.activeSelect()"/>
+        </vbox>
+        <vbox>
+          <spacer flex="1"/>
+          <button id="left" label="←" disabled="true"
+                  oncommand="TreeStatOptions.leftPressed();"/>
+          <button id="right" label="→" disabled="true"
+                  oncommand="TreeStatOptions.rightPressed();"/>
+          <button id="up" label="↑" disabled="true"
+                  oncommand="TreeStatOptions.upPressed();"/>
+          <button id="down" label="↓" disabled="true"
+                  oncommand="TreeStatOptions.downPressed();"/>
+          <spacer flex="1"/>
+        </vbox>
+        <vbox flex="1">
+          <caption label="&prefs_inactive;"/>
+          <listbox id="treestat-inactive"
+           onselect="TreeStatOptions.inactiveSelect()"/>
+        </vbox>
+    </hbox>
+  </prefpane>
+</dialog>

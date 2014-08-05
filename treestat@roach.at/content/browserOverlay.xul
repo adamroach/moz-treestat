@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<overlay id="treestat-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript" src="chrome://treestat/content/TreeStatOverlay.js"/>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbaritem id="treestat-toolbar-item" label="TreeStat">
+      <hbox>
+        <vbox>
+          <image src="chrome://treestat/content/green.png" maxheight="16"/>
+        </vbox>
+        <separator orient="vertical" width="2"/>
+        <vbox>
+          <image src="chrome://treestat/content/green.png" maxheight="16"/>
+        </vbox>
+        <separator orient="vertical" width="2"/>
+        <vbox>
+          <image src="chrome://treestat/content/red.png" maxheight="16"/>
+        </vbox>
+      </hbox>
+    </toolbaritem>
+  </toolbarpalette>
+</overlay>

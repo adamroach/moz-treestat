@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+
+    <em:id>treestat@roach.at</em:id>
+    <em:name>TreeStat</em:name>
+    <em:version>0.2</em:version>
+    <em:description>Display the open/closed status of Mozilla's trees</em:description>
+    <em:creator>Adam Roach</em:creator>
+    <em:iconURL>chrome://treestat/content/icon.png</em:iconURL>
+    <em:optionsURL>chrome://treestat/content/options.xul</em:optionsURL>
+    <em:type>2</em:type> <!-- type=extension -->
+
+    <!-- Firefox -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>4.0b1</em:minVersion>
+        <em:maxVersion>30.0</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+    <!-- Thunderbird -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>5.0</em:minVersion>
+        <em:maxVersion>30.0</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+  </Description>
+
+</RDF>
+
