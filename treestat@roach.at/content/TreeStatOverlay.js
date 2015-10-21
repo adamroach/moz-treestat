@@ -99,6 +99,7 @@ var TreeStatOverlay = {
     httpRequest.timeout = 500 * this.prefs.getIntPref("frequency");
     httpRequest.ontimeout = function() { this.setUnknownState("Timeout"); }.bind(this);
     httpRequest.open('GET',this.prefs.getCharPref("rooturl")+"trees");
+    httpRequest.setRequestHeader("Accept", "application/json");
     httpRequest.send(null);
   },
 

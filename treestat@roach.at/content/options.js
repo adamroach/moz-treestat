@@ -42,6 +42,7 @@ var TreeStatOptions = {
         TreeStatOptions.populateInactive();
       }
       httpRequest.open('GET',this.prefs.getCharPref("rooturl")+"trees");
+      httpRequest.setRequestHeader("Accept", "application/json");
       httpRequest.send(null);
     } else {
       this.populateInactive();
