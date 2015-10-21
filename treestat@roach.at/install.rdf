@@ -7,7 +7,7 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
     <em:id>treestat@roach.at</em:id>
     <em:name>TreeStat</em:name>
-    <em:version>0.2</em:version>
+    <em:version>0.3</em:version>
     <em:description>Display the open/closed status of Mozilla's trees</em:description>
     <em:creator>Adam Roach</em:creator>
     <em:iconURL>chrome://treestat/content/icon.png</em:iconURL>
@@ -19,7 +19,7 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>4.0b1</em:minVersion>
-        <em:maxVersion>30.0</em:maxVersion>
+        <em:maxVersion>45.0</em:maxVersion>
       </Description>
     </em:targetApplication>
 
@@ -28,7 +28,7 @@ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>5.0</em:minVersion>
-        <em:maxVersion>30.0</em:maxVersion>
+        <em:maxVersion>45.0</em:maxVersion>
       </Description>
     </em:targetApplication>
 
