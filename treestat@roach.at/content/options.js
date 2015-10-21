@@ -33,7 +33,7 @@ var TreeStatOptions = {
       var httpRequest = new XMLHttpRequest();
       httpRequest.onreadystatechange = function() {
         if (httpRequest.readyState === 4) {
-          var treestat = JSON.parse(httpRequest.responseText);
+          var treestat = JSON.parse(httpRequest.responseText)['result'];
           var trees = [];
           for (var item in treestat) {
             TreeStatOptions.alltrees.push(item);
@@ -41,7 +41,7 @@ var TreeStatOptions = {
         }
         TreeStatOptions.populateInactive();
       }
-      httpRequest.open('GET',this.prefs.getCharPref("rooturl")+"?format=json");
+      httpRequest.open('GET',this.prefs.getCharPref("rooturl")+"trees");
       httpRequest.send(null);
     } else {
       this.populateInactive();

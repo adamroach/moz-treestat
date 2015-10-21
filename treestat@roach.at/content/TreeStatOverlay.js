@@ -60,7 +60,7 @@ var TreeStatOverlay = {
       var bottomspacer = document.createElement("spacer");
       image.setAttribute("tooltiptext",this.active[item]);
       image.addEventListener("click", this.makeOnClick(
-          this.prefs.getCharPref("rooturl") + this.active[item]),
+          this.prefs.getCharPref("rooturl") + 'details/' + this.active[item]),
         false);
       image.setAttribute("src","chrome://treestat/content/unknown.png");
       image.setAttribute("maxheight",this.prefs.getIntPref("gemsize"));
@@ -89,7 +89,7 @@ var TreeStatOverlay = {
         if (httpRequest.status >= 200 && httpRequest.status < 300) {
           // Color the gems
           var treestat = JSON.parse(httpRequest.responseText);
-          this.setGemState(treestat);
+          this.setGemState(treestat['result']);
         } else {
           this.setUnknownState(httpRequest.statusText);
         }
@@ -98,7 +98,7 @@ var TreeStatOverlay = {
     // If it takes more than half the refresh time, indicate a problem.
     httpRequest.timeout = 500 * this.prefs.getIntPref("frequency");
     httpRequest.ontimeout = function() { this.setUnknownState("Timeout"); }.bind(this);
-    httpRequest.open('GET',this.prefs.getCharPref("rooturl")+"?format=json");
+    httpRequest.open('GET',this.prefs.getCharPref("rooturl")+"trees");
     httpRequest.send(null);
   },
 
